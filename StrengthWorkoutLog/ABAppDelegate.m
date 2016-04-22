@@ -14,12 +14,10 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
@@ -57,12 +55,22 @@
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-             // Replace this implementation with code to handle the error appropriately.
-             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
+            [self showAlert:error andUserErrorInfo:[error userInfo]];
         } 
     }
+}
+
+- (void)showAlert:(NSError *) error andUserErrorInfo:(NSDictionary *)errorInfo {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Unresolved error %@, %@", error, [error userInfo]]
+                                                        message:@"There was a problem saving your data but it is not your fault. If you restart the app, you can try again. Please contact support (support@ethonline.com) to notify us of this issue."
+                                                       delegate:self
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+    [alertView show];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    abort();
 }
 
 #pragma mark - Core Data stack
@@ -108,31 +116,16 @@
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
-        /*
-         Replace this implementation with code to handle the error appropriately.
-         
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-         
-         Typical reasons for an error here include:
-         * The persistent store is not accessible;
-         * The schema for the persistent store is incompatible with current managed object model.
-         Check the error message to determine what the actual problem was.
-         
-         
-         If the persistent store is not accessible, there is typically something wrong with the file path. Often, a file URL is pointing into the application's resources directory instead of a writeable directory.
-         
-         If you encounter schema incompatibility errors during development, you can reduce their frequency by:
-         * Simply deleting the existing store:
-         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil]
-         
-         * Performing automatic lightweight migration by passing the following dictionary as the options parameter:
-         @{NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES}
-         
-         Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
-         
-         */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+
+         NSString *failureReason = @"There was an error creating or loading the application's saved data.";
+
+        // Report any error we got.
+        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+        dict[NSLocalizedDescriptionKey] = @"Failed to initialize the application's saved data";
+        dict[NSLocalizedFailureReasonErrorKey] = failureReason;
+        dict[NSUnderlyingErrorKey] = error;
+        error = [NSError errorWithDomain:@"com.ethonline" code:9999 userInfo:dict];
+        [self showAlert:error andUserErrorInfo:[error userInfo]];
     }    
     
     return _persistentStoreCoordinator;

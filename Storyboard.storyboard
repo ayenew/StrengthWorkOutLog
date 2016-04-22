@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="J3r-SV-imq">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="WAN-QH-gmd">
+            <objects>
+                <viewController id="01e-Ao-En0" customClass="ABVMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jrx-0T-U0x"/>
+                        <viewControllerLayoutGuide type="bottom" id="cAn-SF-4Nr"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="MSN-iB-JT9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omf-fk-P3b">
+                                <rect key="frame" x="66" y="100" width="189" height="34"/>
+                                <color key="backgroundColor" red="0.27843137254901962" green="0.46274509803921571" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="189" id="TOH-oP-fzF"/>
+                                    <constraint firstAttribute="height" constant="34" id="ps9-qR-hgi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="16"/>
+                                <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
+                                <state key="normal" title="Exercise Types">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="16S-Wk-hV2" kind="push" identifier="ExerciseTypeSegue" id="Tmo-KA-eqd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMu-5J-5kl">
+                                <rect key="frame" x="66" y="142" width="189" height="34"/>
+                                <color key="backgroundColor" red="0.2784313725" green="0.46274509800000002" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="KYx-eU-yaw"/>
+                                    <constraint firstAttribute="width" constant="189" id="tIQ-Ag-sgQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="16"/>
+                                <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
+                                <state key="normal" title="Enter Today's Workout">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="bOE-AB-te7" kind="push" identifier="ExerciseSegue" id="hWn-ie-HwA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPL-kq-0R9">
+                                <rect key="frame" x="66" y="268" width="189" height="34"/>
+                                <color key="backgroundColor" red="0.2784313725" green="0.46274509800000002" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="189" id="mdc-dW-Ngr"/>
+                                    <constraint firstAttribute="height" constant="34" id="xlI-Ea-E3A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="16"/>
+                                <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
+                                <state key="normal" title="Monthly Summary">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="h1x-mP-RCk" kind="push" id="ZAG-HZ-1SR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHx-9m-4yH">
+                                <rect key="frame" x="66" y="226" width="189" height="34"/>
+                                <color key="backgroundColor" red="0.2784313725" green="0.46274509800000002" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Df6-4C-JrH"/>
+                                    <constraint firstAttribute="width" constant="189" id="JTw-Rt-FSa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
+                                <state key="normal" title="Weekly Summary ">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="klC-Gh-zpV" kind="push" identifier="MonthlySummarySegue" id="cmx-k5-9u7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrh-3g-6B2">
+                                <rect key="frame" x="66" y="184" width="189" height="34"/>
+                                <color key="backgroundColor" red="0.2784313725" green="0.46274509800000002" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="189" id="4zV-Nc-4b3"/>
+                                    <constraint firstAttribute="height" constant="34" id="QuG-0b-XQF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                <state key="normal" title="Days Summary">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="yrB-Jh-rFQ" kind="push" id="prb-UL-vjX"/>
+                                </connections>
+                            </button>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="HxV-HT-hTx">
+                                <rect key="frame" x="-4" y="400" width="328" height="50"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MSN-iB-JT9" id="96t-55-I7d"/>
+                                </connections>
+                            </adBannerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.31372549019607843" green="0.51372549019607838" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qrh-3g-6B2" firstAttribute="top" secondItem="eMu-5J-5kl" secondAttribute="bottom" constant="8" symbolic="YES" id="9ar-7f-HCm"/>
+                            <constraint firstItem="eMu-5J-5kl" firstAttribute="centerX" secondItem="omf-fk-P3b" secondAttribute="centerX" id="9y0-oU-CGo"/>
+                            <constraint firstItem="HxV-HT-hTx" firstAttribute="leading" secondItem="MSN-iB-JT9" secondAttribute="leadingMargin" constant="-20" id="AIG-Mq-MT4"/>
+                            <constraint firstItem="qrh-3g-6B2" firstAttribute="centerX" secondItem="omf-fk-P3b" secondAttribute="centerX" id="JdO-sQ-HYL"/>
+                            <constraint firstItem="GHx-9m-4yH" firstAttribute="centerX" secondItem="omf-fk-P3b" secondAttribute="centerX" id="L0a-C7-0bd"/>
+                            <constraint firstItem="cAn-SF-4Nr" firstAttribute="top" secondItem="HxV-HT-hTx" secondAttribute="bottom" constant="14" id="T63-8a-qMj"/>
+                            <constraint firstItem="eMu-5J-5kl" firstAttribute="top" secondItem="omf-fk-P3b" secondAttribute="bottom" constant="8" symbolic="YES" id="Uv4-Yr-swF"/>
+                            <constraint firstItem="TPL-kq-0R9" firstAttribute="top" secondItem="GHx-9m-4yH" secondAttribute="bottom" constant="8" symbolic="YES" id="i8K-yf-tvn"/>
+                            <constraint firstItem="omf-fk-P3b" firstAttribute="top" secondItem="Jrx-0T-U0x" secondAttribute="bottom" constant="36" id="kDu-2r-BYa"/>
+                            <constraint firstItem="TPL-kq-0R9" firstAttribute="centerX" secondItem="omf-fk-P3b" secondAttribute="centerX" id="lHe-zk-Oif"/>
+                            <constraint firstItem="GHx-9m-4yH" firstAttribute="top" secondItem="qrh-3g-6B2" secondAttribute="bottom" constant="8" symbolic="YES" id="oqN-dB-A9T"/>
+                            <constraint firstItem="omf-fk-P3b" firstAttribute="centerX" secondItem="MSN-iB-JT9" secondAttribute="centerX" id="ue9-0Z-sXM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cxP-N6-KQG"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="banner" destination="HxV-HT-hTx" id="t3M-o3-NZn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qq1-yg-Tm2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-500" y="24"/>
+        </scene>
+        <!--Exercise Types-->
+        <scene sceneID="uTX-8G-3jq">
+            <objects>
+                <tableViewController id="16S-Wk-hV2" customClass="ABDisplayExerciseTypeViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7vk-Da-M4p">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.51372549019607838" green="0.6705882352941176" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ExerciseTypeCell" textLabel="nPc-eT-tlX" style="IBUITableViewCellStyleDefault" id="jTp-so-1qk">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jTp-so-1qk" id="1CJ-h7-K3Z">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nPc-eT-tlX">
+                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="15"/>
+                                            <color key="textColor" red="0.023529411760000001" green="0.20000000000000001" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="00f-Ba-JR1" kind="push" identifier="EditExerciseTypeSegue" id="5UK-cx-Eaw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="16S-Wk-hV2" id="AW2-Yg-zQl"/>
+                            <outlet property="delegate" destination="16S-Wk-hV2" id="SpC-1z-8Gm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Exercise Types" id="t5k-P7-oMr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Pwb-Oo-tKN">
+                            <connections>
+                                <segue destination="00f-Ba-JR1" kind="push" identifier="AddExerciseTypeSegue" id="70q-sO-q4r"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p8G-ys-JTK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87" y="495"/>
+        </scene>
+        <!--This Month Summary-->
+        <scene sceneID="yam-YG-8jU">
+            <objects>
+                <tableViewController id="h1x-mP-RCk" customClass="ABMonthSummaryViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="NeD-bF-Nt5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.51372549019607838" green="0.6705882352941176" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="mo9-yn-7EL">
+                                <rect key="frame" x="0.0" y="114" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mo9-yn-7EL" id="jNJ-wv-6Tc">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUZ-vL-vMa">
+                                            <rect key="frame" x="20" y="2" width="280" height="21"/>
+                                            <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="200" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AwC-S3-wCZ">
+                                            <rect key="frame" x="20" y="20" width="280" height="21"/>
+                                            <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="h1x-mP-RCk" id="xWD-CJ-SIj"/>
+                            <outlet property="delegate" destination="h1x-mP-RCk" id="pHp-Bs-yoI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="This Month Summary" id="inq-Lv-VON"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBw-n3-pBz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-720" y="694"/>
+        </scene>
+        <!--This Week Summary-->
+        <scene sceneID="sy0-Us-4c9">
+            <objects>
+                <tableViewController id="klC-Gh-zpV" customClass="ABWeekSummaryViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="56" sectionHeaderHeight="10" sectionFooterHeight="10" id="ZDu-n7-S6x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.51372549019607838" green="0.6705882352941176" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="56" id="qTO-1A-NDy">
+                                <rect key="frame" x="0.0" y="114" width="320" height="56"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qTO-1A-NDy" id="QOs-c0-tmT">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMw-3f-l6n">
+                                            <rect key="frame" x="20" y="11" width="206" height="21"/>
+                                            <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="15"/>
+                                            <color key="textColor" red="0.023529411760000001" green="0.20000000000000001" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="200" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frq-qB-JLv">
+                                            <rect key="frame" x="20" y="27" width="247" height="21"/>
+                                            <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="klC-Gh-zpV" id="nLD-4E-JbT"/>
+                            <outlet property="delegate" destination="klC-Gh-zpV" id="hR0-id-xc5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="This Week Summary" id="nt7-Lb-w4G"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HrF-uR-5Qi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-341" y="694"/>
+        </scene>
+        <!--Add Exercise Type-->
+        <scene sceneID="gyJ-Pq-Hb3">
+            <objects>
+                <viewController id="00f-Ba-JR1" customClass="ABAddExerciseTypeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZfB-Qk-7gC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vbp-L0-7zK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TTX-xe-jwU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exercise Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hv2-hI-aAZ">
+                                <rect key="frame" x="20" y="83" width="120" height="21"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhM-03-bj2">
+                                <rect key="frame" x="20" y="158" width="93" height="21"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q6u-Le-uXt">
+                                <rect key="frame" x="20" y="112" width="280" height="30"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DHJ-te-CPn">
+                                <rect key="frame" x="20" y="187" width="280" height="128"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.51372549020000002" green="0.6705882353" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Exercise Type" id="jQK-Db-mnh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="xtw-XY-FmG">
+                            <connections>
+                                <action selector="donePressed:" destination="00f-Ba-JR1" id="H6l-Xu-ns3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="exerciseDesc" destination="DHJ-te-CPn" id="Pfp-Qo-9jf"/>
+                        <outlet property="exerciseNameTextField" destination="q6u-Le-uXt" id="I8l-PO-FDe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SMs-Bp-k0n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="554" y="463"/>
+        </scene>
+        <!--Query Exercise-->
+        <scene sceneID="caM-1f-57N">
+            <objects>
+                <tableViewController id="yrB-Jh-rFQ" customClass="ABDaySummaryViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0xw-QE-MXl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.51372549019607838" green="0.6705882352941176" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection id="wpf-4D-r5b">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="BYY-8S-c13">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BYY-8S-c13" id="MkW-8Z-K3W">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jy6-MT-eqC">
+                                                    <rect key="frame" x="20" y="11" width="84" height="21"/>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMF-2O-K8h">
+                                                    <rect key="frame" x="154" y="11" width="143" height="21"/>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.51372549020000002" green="0.6705882353" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="164" id="9jS-Zs-MJ3">
+                                        <rect key="frame" x="0.0" y="108" width="320" height="164"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9jS-Zs-MJ3" id="L2c-jb-L86">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="164"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Og9-xb-Y36">
+                                                    <rect key="frame" x="0.0" y="1" width="320" height="155"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="413149586.84689498">
+                                                        <!--2014-02-03 19:46:26 +0000-->
+                                                    </date>
+                                                    <connections>
+                                                        <action selector="pickerDateChanged:" destination="yrB-Jh-rFQ" eventType="valueChanged" id="mmF-TL-Y0V"/>
+                                                    </connections>
+                                                </datePicker>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.51372549020000002" green="0.6705882353" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="PxM-SV-Ysp">
+                                        <rect key="frame" x="0.0" y="272" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PxM-SV-Ysp" id="6eH-KY-fHR">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtC-FH-x18">
+                                                    <rect key="frame" x="20" y="11" width="71" height="21"/>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vb-R1-1Dt">
+                                                    <rect key="frame" x="155" y="11" width="145" height="21"/>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.51372549020000002" green="0.6705882353" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="163" id="Lay-Xm-CIl">
+                                        <rect key="frame" x="0.0" y="316" width="320" height="163"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lay-Xm-CIl" id="p6P-f9-fsT">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="163"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="70h-xX-fp8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="162"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="413149640.96872401">
+                                                        <!--2014-02-03 19:47:20 +0000-->
+                                                    </date>
+                                                    <connections>
+                                                        <action selector="pickerDateChanged:" destination="yrB-Jh-rFQ" eventType="valueChanged" id="zOV-jE-TaW"/>
+                                                    </connections>
+                                                </datePicker>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.51372549020000002" green="0.6705882353" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="QZg-Kf-br0">
+                                        <rect key="frame" x="0.0" y="479" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QZg-Kf-br0" id="Nu0-Xa-F3Y">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgN-eG-mBA">
+                                                    <rect key="frame" x="94" y="4" width="132" height="35"/>
+                                                    <color key="backgroundColor" red="0.27843137254901962" green="0.46274509803921571" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="15"/>
+                                                    <state key="normal" title="Fetch">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="fetchData:" destination="yrB-Jh-rFQ" eventType="touchUpInside" id="vvZ-Az-f2k"/>
+                                                        <segue destination="djq-Se-JoV" kind="push" identifier="DaySegue" id="58e-n2-5dE"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.51372549020000002" green="0.6705882353" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="yrB-Jh-rFQ" id="h4c-ac-PYt"/>
+                            <outlet property="delegate" destination="yrB-Jh-rFQ" id="prT-zU-sBE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Query Exercise" id="9e4-Kt-4XW"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="endDateLabel" destination="2vb-R1-1Dt" id="Zg1-yS-ru0"/>
+                        <outlet property="endDatePicker" destination="70h-xX-fp8" id="nYN-D0-MxZ"/>
+                        <outlet property="endDatePickerCell" destination="Lay-Xm-CIl" id="DCO-Bc-uDp"/>
+                        <outlet property="startDateLabel" destination="UMF-2O-K8h" id="W5E-5g-2GZ"/>
+                        <outlet property="startDatePicker" destination="Og9-xb-Y36" id="g8o-K9-Bec"/>
+                        <outlet property="startDatePickerCell" destination="9jS-Zs-MJ3" id="sH1-oW-8H6"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FVL-TN-KjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="-615"/>
+        </scene>
+        <!--Day View Controller-->
+        <scene sceneID="1Ud-oA-lMy">
+            <objects>
+                <tableViewController id="djq-Se-JoV" customClass="ABDayViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eGc-as-UVT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.51372549020000002" green="0.6705882353" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="1xQ-Gi-lPf">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1xQ-Gi-lPf" id="Ncd-fh-TRF">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iz7-RJ-veq">
+                                            <rect key="frame" x="15" y="2" width="285" height="21"/>
+                                            <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="200" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCm-ns-P95">
+                                            <rect key="frame" x="15" y="20" width="285" height="21"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="14"/>
+                                            <color key="textColor" red="0.023529411760000001" green="0.20000000000000001" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.51372549020000002" green="0.6705882353" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="djq-Se-JoV" id="nMH-cr-2nq"/>
+                            <outlet property="delegate" destination="djq-Se-JoV" id="dMx-l1-rEh"/>
+                        </connections>
+                    </tableView>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afX-Ay-0jz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="554" y="-615"/>
+        </scene>
+        <!--Daily Exercise Log-->
+        <scene sceneID="nKE-kX-522">
+            <objects>
+                <tableViewController id="bOE-AB-te7" customClass="ABDisplayDailyExerciseViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hvG-kc-zmh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.51372549019607838" green="0.6705882352941176" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ExerciseCell" id="715-6U-u2y">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="715-6U-u2y" id="Gim-kA-38k">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UlO-ts-tqJ">
+                                            <rect key="frame" x="20" y="2" width="247" height="21"/>
+                                            <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="15"/>
+                                            <color key="textColor" red="0.023529411760000001" green="0.20000000000000001" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="200" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc0-ZL-Xn8">
+                                            <rect key="frame" x="20" y="20" width="247" height="21"/>
+                                            <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="URw-Ee-KBx" kind="push" identifier="EditExerciseSegue" id="kOu-aK-HuO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bOE-AB-te7" id="2eP-dq-PF8"/>
+                            <outlet property="delegate" destination="bOE-AB-te7" id="j1x-wW-zHj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Daily Exercise Log" id="Qvg-VB-LF3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="n0i-k8-ezq">
+                            <connections>
+                                <segue destination="URw-Ee-KBx" kind="push" identifier="AddExerciseSegue" id="DWe-KV-9lU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLb-9S-Tcx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="18"/>
+        </scene>
+        <!--Add Daily Log-->
+        <scene sceneID="Cud-zz-Lm6">
+            <objects>
+                <tableViewController id="URw-Ee-KBx" customClass="ABEditExerciseViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6Ug-RB-00F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.51372549020000002" green="0.6705882353" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection id="BOY-QI-tt0">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="42" id="yZg-9b-duf">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="42"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yZg-9b-duf" id="b27-lq-j9K">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="42"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exercise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZ1-R6-1gg">
+                                                    <rect key="frame" x="20" y="10" width="65" height="21"/>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngA-1K-jcc">
+                                                    <rect key="frame" x="114" y="10" width="186" height="21"/>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="155" id="QJr-3M-yVv">
+                                        <rect key="frame" x="0.0" y="106" width="320" height="155"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QJr-3M-yVv" id="I0z-XC-7DK">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="155"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ge-ct-h3u">
+                                                    <rect key="frame" x="0.0" y="-6" width="320" height="141"/>
+                                                </pickerView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="OXY-se-cDF">
+                                        <rect key="frame" x="0.0" y="261" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OXY-se-cDF" id="BY7-Iq-0mv">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJN-Tz-EGi">
+                                                    <rect key="frame" x="20" y="11" width="54" height="21"/>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D1q-vh-fz8">
+                                                    <rect key="frame" x="115" y="7" width="133" height="30"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="45" id="j3k-EZ-ofA">
+                                        <rect key="frame" x="0.0" y="305" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j3k-EZ-ofA" id="uod-c1-a7W">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFc-Oa-1p2">
+                                                    <rect key="frame" x="20" y="11" width="87" height="21"/>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BKo-vS-8P4">
+                                                    <rect key="frame" x="115" y="7" width="132" height="30"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="53" id="vwF-GV-hWt">
+                                        <rect key="frame" x="0.0" y="350" width="320" height="53"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vwF-GV-hWt" id="fEz-28-dpO">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repetitions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRm-9z-fVf">
+                                                    <rect key="frame" x="20" y="11" width="87" height="21"/>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cyn-ur-h4s">
+                                                    <rect key="frame" x="115" y="7" width="132" height="30"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="delegate" destination="URw-Ee-KBx" id="ZKO-gG-1eM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Daily Log" id="iBq-Bq-VZ1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Tod-8F-0H7">
+                            <connections>
+                                <action selector="savePressed:" destination="URw-Ee-KBx" id="JUo-Zx-d9E"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="dataPickerCell" destination="QJr-3M-yVv" id="kot-s9-GVJ"/>
+                        <outlet property="exerciseLabel" destination="ngA-1K-jcc" id="d2h-Wd-m5a"/>
+                        <outlet property="exercisePickerView" destination="8ge-ct-h3u" id="e5g-Dh-VaD"/>
+                        <outlet property="repetitionsTextField" destination="cyn-ur-h4s" id="f83-DN-AmW"/>
+                        <outlet property="setsTextField" destination="BKo-vS-8P4" id="ivJ-YN-2Fe"/>
+                        <outlet property="weightTextField" destination="D1q-vh-fz8" id="2DT-JA-752"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cHT-sf-t2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="554" y="-61"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Oat-mP-NT0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J3r-SV-imq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0MZ-XU-7Et">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="01e-Ao-En0" kind="relationship" relationship="rootViewController" id="VGC-VQ-WLQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zbb-FO-wPR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-856" y="24"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="5UK-cx-Eaw"/>
+        <segue reference="kOu-aK-HuO"/>
+    </inferredMetricsTieBreakers>
+</document>
